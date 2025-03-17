@@ -4,62 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UMSI Student Life</title>
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-
-    <header>
-        <a href="#main-content">Skip to Main Content</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="M_Blue.html">Maize & Blue Cupboard</a></li>
-                <li><a href="Academic_Advising.html">UMSI Academic Success and Tutoring</a></li>
-                <li><a href="umsi_studentlife.html">UMSI Student Life</a></li>
-            </ul>
-        </nav>
-        <h1>UMSI Student Life</h1>
+    <header class="fixed-header">
+        <a href="#main-content" class="skip">Skip to Main Content</a>
+        <div class="header-grid">
+            <div class="logo">
+                <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+            </div>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="M_Blue.html">Maize & Blue Cupboard</a></li>
+                    <li><a href="Academic_Advising.html">UMSI Academic Success and Tutoring</a></li>
+                    <li><a href="umsi_studentlife.html" class="active">UMSI Student Life</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <img src="images/arvr.JPG" alt="Students standing around a computer testing AR and VR equipment.">
-        <h2 id="main-content">Student Life</h2>
-        <div>
-            <p>UMSI Student Life’s mission is to enrich each UMSI student’s experience while cultivating an inclusive and welcoming community at the school. We are committed to enhancing student educational experiences through programs, services, and opportunities that develop skills and foster a positive and accessible environment for all UMSI students starting with orientation through graduation. While considering multiple aspects of the student experience, Student Life strives to engage every student across UMSI’s academic programs through its pillars of student leadership, community, well-being and campus life.</p>
 
-            <ul>
-                <li><a href="https://www.si.umich.edu/student-experience/student-life/student-organizations">UMSI Student Organizations</a> (Connect with other students, learn new leadership skills, and find your community)</li>
-                <li><a href="https://www.si.umich.edu/student-experience/student-life/health-and-wellness">Health and Wellness</a> (Identify resources to support your overall health and wellbeing)</li>
-                <li>UMSI <a href="https://www.si.umich.edu/student-experience/student-life/graduation-2022">Graduation</a> (Celebrate this important milestone with your UMSI family)</li>
-                <li><a href="https://calendar.google.com/calendar/embed?src=umich.edu_simhglh7ufho84fgtlgn9812m8%40group.calendar.google.com&ctz=America%2FNew_York">UMSI Events Calendar</a> (Add this calendar to your Google calendar to view upcoming UMSI events)</li>
-            </ul>
-            <p>Contact UMSI Student Life at umsi.studentlife@umich.edu to learn more about our programs and get involved at UMSI!</p>
-            <figure>
-                <img src="images/designjam.jpg" alt="Students work on a prototype as they participate in a design jam at the School of Information Engagement Center.">
-                <figcaption>Students work on a prototype as they participate in a design jam at the School of Information Engagement Center.</figcaption>
-            </figure>
+    <main id="main-content" class="main-student-life">
+        <div class="tile">
+            <h1>UMSI Student Life</h1>
+            <img src="images/arvr.JPG" alt="Students standing around a computer testing AR and VR equipment.">
         </div>
 
-        <h3>Get Involved at U-M</h3>
-        <div>
-            <ul>
-                <li><a href="https://campusinvolvement.umich.edu/">Center for Campus Involvement</a></li>
-                <li><a href="https://studentlife.umich.edu/">U-M Student Life</a></li>
-                <li><a href="https://events.umich.edu/">U-M Events Calendar</a></li>
-            </ul>
-            <img src="images/mpops.jpg" alt="POPS Student Orchestra performing outside on the diag.">
+        <div class="tile">
+            <h2 id="main-content">Student Life</h2>
+            <div>
+                <p>UMSI Student Life’s mission is to enrich each UMSI student’s experience while cultivating an inclusive and welcoming community at the school. We are committed to enhancing student educational experiences through programs, services, and opportunities that develop skills and foster a positive and accessible environment for all UMSI students starting with orientation through graduation. While considering multiple aspects of the student experience, Student Life strives to engage every student across UMSI’s academic programs through its pillars of student leadership, community, well-being and campus life.</p>
+
+                <ul>
+                    <li><a href="https://www.si.umich.edu/student-experience/student-life/student-organizations">UMSI Student Organizations</a> (Connect with other students, learn new leadership skills, and find your community)</li>
+                    <li><a href="https://www.si.umich.edu/student-experience/student-life/health-and-wellness">Health and Wellness</a> (Identify resources to support your overall health and wellbeing)</li>
+                    <li>UMSI <a href="https://www.si.umich.edu/student-experience/student-life/graduation-2022">Graduation</a> (Celebrate this important milestone with your UMSI family)</li>
+                    <li><a href="https://calendar.google.com/calendar/embed?src=umich.edu_simhglh7ufho84fgtlgn9812m8%40group.calendar.google.com&ctz=America%2FNew_York">UMSI Events Calendar</a> (Add this calendar to your Google calendar to view upcoming UMSI events)</li>
+                </ul>
+                <p>Contact UMSI Student Life at umsi.studentlife@umich.edu to learn more about our programs and get involved at UMSI!</p>
+                <figure>
+                    <img src="images/designjam.jpg" alt="Students work on a prototype as they participate in a design jam at the School of Information Engagement Center.">
+                    <figcaption>Students work on a prototype as they participate in a design jam at the School of Information Engagement Center.</figcaption>
+                </figure>
+            </div>
         </div>
 
-        <h3>Life in Ann Arbor</h3>
-        <div>
-            <p><a href="https://www.si.umich.edu/about-umsi/life-ann-arbor">Life in Ann Arbor</a> provides resources for students, including information about housing, parking, transportation, entertainment and life in Ann Arbor.</p>
-            <img src="images/state.jpg" alt="State Theatre playboard is shown on State Street.">
-        </div>
-        <h3>The Academic Programs and Student Life team</h3>
-        <div>
-            <p>The <a href="https://www.si.umich.edu/student-experience/academic-success/about-academic-programs-and-student-life-team">Academic Programs and Student Life team</a> is situated within the Office of Academic and Student Affairs. Our team leads a wide range of success-oriented work with and for current students at the School of Information (UMSI) across academic programs. We strive to enhance the student educational experience through programs, services, and opportunities that support <a href="https://www.si.umich.edu/student-experience/academic-success">academic success</a>, develop skills, and foster a positive and accessible environment for all UMSI students starting at the point they matriculate to a UMSI program.</p>
+        <div class="tile">
+            <h3>Get Involved at U-M</h3>
+            <div>
+                <ul>
+                    <li><a href="https://campusinvolvement.umich.edu/">Center for Campus Involvement</a></li>
+                    <li><a href="https://studentlife.umich.edu/">U-M Student Life</a></li>
+                    <li><a href="https://events.umich.edu/">U-M Events Calendar</a></li>
+                </ul>
+                <img src="images/mpops.jpg" alt="POPS Student Orchestra performing outside on the diag.">
+            </div>
         </div>
 
-        <img src="images/autoclass.jpg" alt="Students take a selfie together during SI 311-150, Introduction to Automotive User Experience.">
+        <div class="tile">
+            <h3>Life in Ann Arbor</h3>
+            <div>
+                <p><a href="https://www.si.umich.edu/about-umsi/life-ann-arbor">Life in Ann Arbor</a> provides resources for students, including information about housing, parking, transportation, entertainment and life in Ann Arbor.</p>
+                <img src="images/state.jpg" alt="State Theatre playboard is shown on State Street.">
+            </div>
+        </div>
+
+        <div class="tile">
+            <h3>The Academic Programs and Student Life team</h3>
+            <div>
+                <p>The <a href="https://www.si.umich.edu/student-experience/academic-success/about-academic-programs-and-student-life-team">Academic Programs and Student Life team</a> is situated within the Office of Academic and Student Affairs. Our team leads a wide range of success-oriented work with and for current students at the School of Information (UMSI) across academic programs. We strive to enhance the student educational experience through programs, services, and opportunities that support <a href="https://www.si.umich.edu/student-experience/academic-success">academic success</a>, develop skills, and foster a positive and accessible environment for all UMSI students starting at the point they matriculate to a UMSI program.</p>
+            </div>
+        </div>
+
+        <div class="tile">
+            <img src="images/autoclass.jpg" alt="Students take a selfie together during SI 311-150, Introduction to Automotive User Experience.">
+        </div>
     </main>
     <footer>
         <p>UMSI Student Life | <a href="https://www.si.umich.edu/student-experience/student-life">UMSI Student Life</a></p>

@@ -4,97 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Support at UMSI</title>
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <header>
-        <a href="#main-content">Skip to Main Content</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="M_Blue.html">Maize & Blue Cupboard</a></li>
-                <li><a href="Academic_Advising.html">UMSI Academic Success and Tutoring</a></li>
-                <li><a href="umsi_studentlife.html">UMSI Student Life</a></li>
-            </ul>
-        </nav>
-        <h1>Academic Support at UMSI</h1>
+    <header class="fixed-header">
+        <a href="#main-content" class="skip">Skip to Main Content</a>
+        <div class="header-grid">
+            <div class="logo">
+                <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+            </div>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="M_Blue.html">Maize & Blue Cupboard</a></li>
+                    <li><a href="Academic_Advising.html" class="active">UMSI Academic Success and Tutoring</a></li>
+                    <li><a href="umsi_studentlife.html">UMSI Student Life</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <img src="images/north_quad.jpg" alt="North Quad Building.">
-        <h2>Academic Success and Tutoring</h2>
-        <div>
-            <p>The UMSI Academic Success Team, as part of the Academic Programs & Student Life Team, works to holistically support students, both academically and personally. The Academic Success team oversees UMSI tutoring and academic skill-building programs, in addition to supporting students in navigating their time at UMSI.</p>
+    <main id="main-content" class="main-academic-advising">
+        <div class="tile">
+            <h1>Academic Support at UMSI</h1>
+            <img src="images/north_quad.jpg" alt="North Quad Building.">
         </div>
 
-        <h3 id="main-content">Schedule an Academic Success Meeting</h3>
-        <div>
-            <p>Schedule a meeting with an Academic Success team member via <a href="https://si-umich.navigate.eab.com/app/#/authentication/remote/">Navigate360</a>.</p>
-            <ul>
-                <li>Shannon Gass, Assistant Director of Student Success</li>
-                <li>KC Pepera, Student Support Manager</li>
-            </ul>
-            <p>Not sure whether you should connect with Shannon or KC about your concern? Check out the section below titled "Meet the Academic Success Team" to review Shannon and KC's areas of support.</p>
-        </div>
-            
-        <h3>Connect with a UMSI Tutor</h3>
-        <div>
-            <p>Check out the <a href="https://sites.google.com/umich.edu/umsitutoring/home?authuser=0">UMSI Tutoring Website</a> for access to the following:</p>
-            <ul>
-                <li>UMSI Programming Tutoring (Free)</li>
-                <li>UMSI Math Tutoring (Free)</li>
-                <li>Peer-to-Peer Tutoring Directory</li>
-            </ul>
+        <div class="tile">
+            <h2>Academic Success and Tutoring</h2>
+            <div>
+                <p>The UMSI Academic Success Team, as part of the Academic Programs & Student Life Team, works to holistically support students, both academically and personally. The Academic Success team oversees UMSI tutoring and academic skill-building programs, in addition to supporting students in navigating their time at UMSI.</p>
+            </div>
         </div>
 
-        <h3>Additional Questions</h3>
-        <div>
-            <h4>Do you have questions about any of the following items?</h4>
-            <ul>
-                <li>Additional Academic Resources (check out the <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">Student Support Resources page)</a></li>
-                <li>Emergency Funding</li>
-                <li>Accommodations</li>
-                <li>Connecting with UM or Community Resources</li>
-            </ul>
-            <h4>Contact the Academic Success team via email at umsi.academicsuccess@umich.edu</h4>
+        <div class="tile">  
+            <h3 id="main-content">Schedule an Academic Success Meeting</h3>
+            <div>
+                <p>Schedule a meeting with an Academic Success team member via <a href="https://si-umich.navigate.eab.com/app/#/authentication/remote/">Navigate360</a>.</p>
+                <ul>
+                    <li>Shannon Gass, Assistant Director of Student Success</li>
+                    <li>KC Pepera, Student Support Manager</li>
+                </ul>
+                <p>Not sure whether you should connect with Shannon or KC about your concern? Check out the section below titled "Meet the Academic Success Team" to review Shannon and KC's areas of support.</p>
+            </div>
         </div>
 
-        <h2>Meet the Academic Success Team!</h2>
-        <table>
-            <tr>
-                <td>
-                    <img src="images/sg.jpg" alt="Shannon Gass">
-                    <h3>Shannon Gass</h3>
-                    <p>Assistant Director of Academic Success</p>
-                    <p><i>Pronouns: She/Her/Hers</i></p>
-                    <p>Support Focus Areas:</p>
-                    <p>Tutoring
-                        Academic Standing
-                        Academic Success Skills
-                        Student Concerns
-                        Academic Accommodations & Working with SSD</p>
-                </td>
-                <td>
-                    <img src="images/kc.jpg" alt="KC Pepera">
-                    <h3>KC Pepera</h3>
-                    <p>Student Support Manager</p>
-                    <p><i>Pronouns: She/Her/Hers</i></p>
-                    <p>Support Focus Areas:</p>
-                    <p>Student Well-Being
-                        Emergency Funding Options
-                        Response to Care Report
-                        Connections to UM & Community Resources</p>
-                </td>
-            </tr>
-        </table>
-
-        <h2>Success Coaching Drop-ins</h2>
-        <h3>Connect with the Academic Success Team during Success Coaching Drop-Ins!</h3>
-        <div>
-            <p>These sessions are intended to help support students with time management, study skills, connection to campus resources, and topics related to academic success.</p>
-            <p>Virtual Drop-Ins will be available on Thursdays from 10:00am - 11:00am ET.</p>
+        <div class="tile"> 
+            <h3>Connect with a UMSI Tutor</h3>
+            <div>
+                <p>Check out the <a href="https://sites.google.com/umich.edu/umsitutoring/home?authuser=0">UMSI Tutoring Website</a> for access to the following:</p>
+                <ul>
+                    <li>UMSI Programming Tutoring (Free)</li>
+                    <li>UMSI Math Tutoring (Free)</li>
+                    <li>Peer-to-Peer Tutoring Directory</li>
+                </ul>
+            </div>
         </div>
-        <a href="https://officehours.it.umich.edu/queue/1642/">Click here to Join the Success Coaching Queue</a>
+
+        <div class="tile"> 
+            <h3>Additional Questions</h3>
+            <div>
+                <p>Do you have questions about any of the following items?</p>
+                <ul>
+                    <li>Additional Academic Resources (check out the <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">Student Support Resources page)</a></li>
+                    <li>Emergency Funding</li>
+                    <li>Accommodations</li>
+                    <li>Connecting with UM or Community Resources</li>
+                </ul>
+                <p>Contact the Academic Success team via email at <a href="mailto:umsi.academicsuccess@umich.edu">umsi.academicsuccess@umich.edu</a></p>
+            </div>
+        </div>
+
+        <div class="tile">
+            <h2>Meet the Academic Success Team!</h2>
+            <table>
+                <tr>
+                    <td>
+                        <img src="images/sg.jpg" alt="Shannon Gass">
+                        <h3>Shannon Gass</h3>
+                        <p>Assistant Director of Academic Success</p>
+                        <p><i>Pronouns: She/Her/Hers</i></p>
+                        <p>Support Focus Areas:</p>
+                        <p>Tutoring
+                            Academic Standing
+                            Academic Success Skills
+                            Student Concerns
+                            Academic Accommodations & Working with SSD</p>
+                    </td>
+                    <td>
+                        <img src="images/kc.jpg" alt="KC Pepera">
+                        <h3>KC Pepera</h3>
+                        <p>Student Support Manager</p>
+                        <p><i>Pronouns: She/Her/Hers</i></p>
+                        <p>Support Focus Areas:</p>
+                        <p>Student Well-Being
+                            Emergency Funding Options
+                            Response to Care Report
+                            Connections to UM & Community Resources</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="tile">
+            <h2>Success Coaching Drop-ins</h2>
+            <h3>Connect with the Academic Success Team during Success Coaching Drop-Ins!</h3>
+            <div>
+                <p>These sessions are intended to help support students with time management, study skills, connection to campus resources, and topics related to academic success.</p>
+                <p>Virtual Drop-Ins will be available on Thursdays from 10:00am - 11:00am ET.</p>
+            </div>
+            <a href="https://officehours.it.umich.edu/queue/1642/">Click here to Join the Success Coaching Queue</a>
+        </div>
     </main>
     <footer>
         <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a></p>

@@ -1,0 +1,416 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    word-wrap: break-word; /* Ensure long words break correctly */
+    overflow-wrap: break-word; /* Ensure long words break correctly */
+    padding-top: 60px; /* Adds space for fixed header */
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito sans', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+/* Header Styles */
+.fixed-header {
+    position: fixed; /* Fixed header */
+    top: 0;
+    width: 100%; /* Full width */
+    overflow: hidden; /* Hide overflow content */
+    background-color: #00274C;
+    z-index: 1000;
+    display: flex; /* Flex container to wrap header */
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+    box-sizing: border-box;
+}
+
+.header-grid {
+    display: flex; /* Flex container to wrap header */
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    height: 80px; /* Scale down the logo image */
+    width: auto;
+    max-width: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; /* Allow nav items to wrap */
+    margin-bottom: 20px; /* Add space between nav links and banner */
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on mobile */
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    justify-content: space-around; /* Evenly space nav items */
+    width: 100%;
+    text-align: center; /* Center nav items */
+    flex-wrap: wrap; /* Allow nav items to wrap */
+}
+
+.nav-links li {
+    display: inline;
+    min-width: 100px; /* Ensure minimum width for nav items */
+}
+
+.nav-links a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #f2f2f2;
+    text-align: center; /* Center text in nav items */
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    background-color: #ddd;
+    color: black;
+}
+
+.nav-links a.active {
+    background-color: #FFCB05; 
+    color: black;
+}
+
+/* Banner Styles */
+.banner {
+    position: relative; /* Relative positioning for overlay */
+    text-align: center;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px; /* Add space between nav links and banner */
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay to read text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h1 {
+    font-size: 8vw; /* Scales with screen width */
+    margin: 0;
+}
+
+/* Skip Link Styles */
+a.skip {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
+}
+
+a.skip:focus {
+    top: 10px;
+    left: 10px;
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Welcome Section Styles */
+.welcome-section {
+    margin-top: 150px;
+}
+.welcome-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    color: #00274C; /* Yellow color */
+    font-weight: bold; /* Make bold */
+}
+
+.welcome-section p,
+.welcome-section ol {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: 10px; /* Add spacing between paragraphs */
+    padding-left: 20px; /* Add padding to the left for list items */
+}
+
+.welcome-section li {
+    margin-bottom: 5px; /* Add spacing between list items */
+    position: relative;
+    padding-left: 20px; /* Add padding to the left for custom bullet */
+}
+
+.welcome-section li::before {
+    content: "•"; /* Custom bullet */
+    position: absolute;
+    left: 0;
+    color: #00274C; 
+    font-weight: bold;
+}
+/* Grid Layout for Sections */
+main {
+    padding-top: 120px;
+    position: relative;
+    z-index: 1;
+}
+.main-index,
+.main-academic-advising,
+.main-mblue,
+.main-student-life {
+    display: grid;
+    gap: 20px;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main-index {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-top: 150px
+}
+
+.main-academic-advising {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-top: 250px;
+}
+
+.main-mblue {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding-top: 270px;
+}
+
+.main-student-life {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    padding-top: 250px;
+}
+
+/* Tile Styles */
+.tile,
+.mblue-tile {
+    background-color: #00274C;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tile h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white; /* Yellow color */
+    font-weight: bold; /* Make bold */
+
+}
+.mblue-tile {
+    background-color: #1C8FAA;
+}
+
+.tile h2 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    color: #FFCB05; /* Yellow color */
+    font-weight: bold; /* Make bold */
+
+}
+
+
+.mblue-tile h2 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    color: white; /* Yellow color */
+    font-weight: bold; /* Make bold */
+}
+
+.mblue-tile h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold; /* Make bold */
+}
+
+.tile h3,
+.mblue-tile h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #FFCB05;
+    font-weight: bold; /* Make bold */
+}
+
+.tile p,
+.mblue-tile p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+    margin-bottom: 10px; /* Add spacing between paragraphs */
+}
+
+.tile ul,
+.mblue-tile ul {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+    margin-bottom: 10px; /* Add spacing between paragraphs */
+    padding-left: 20px; /* Add padding to the left for list items */
+}
+
+.tile li,
+.mblue-tile li {
+    margin-bottom: 5px; /* Add spacing between list items */
+    position: relative;
+    padding-left: 20px; /* Add padding to the left for custom bullet */
+}
+
+.tile li::before,
+.mblue-tile li::before {
+    content: "•"; /* Custom bullet */
+    position: absolute;
+    left: 0;
+    color: #FFCB05; /* Yellow color for bullet */
+    font-weight: bold;
+}
+
+.tile strong,
+.mblue-tile strong {
+    font-weight: bold; /* Ensure strong elements are bold */
+}
+
+.tile article,
+.mblue-tile article {
+    margin-bottom: 20px;
+}
+
+.tile figure,
+.mblue-tile figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.tile img,
+.mblue-tile img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.tile figcaption,
+.mblue-tile figcaption {
+    font-size: 0.875rem;
+    color: white;
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 10px; /* Add spacing between figcaption and other elements */
+}
+
+.tile a,
+.mblue-tile a {
+    color: #FFCB05; /* Yellow color for links */
+    text-decoration: underline; 
+}
+
+.tile a:hover,
+.tile a:focus,
+.mblue-tile a:hover,
+.mblue-tile a:focus {
+    color: #FFD700; /* Lighter yellow color for hover and focus states */
+    text-decoration: underline; /* Add underline on hover and focus */
+}
+
+.tile a:active,
+.mblue-tile a:active {
+    color: #FFA500; /* Orange color for active (clicked) state */
+}
+
+
+
+/* Table Styles */
+.tile table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tile table td {
+    padding: 10px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.tile table img {
+    height: 150px; /* Set a fixed height for the images */
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+}
+/* Footer Styles */
+footer {
+    background-color: #00274C; /* Background color */
+    color: white; /* Text color */
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #FFD700; /* Link color */
+    text-decoration: underline; /* Remove underline */
+}
+
+footer a:hover,
+footer a:focus {
+    color: #FFA500; /* Lighter yellow color for hover and focus states */
+    text-decoration: underline; /* Add underline on hover and focus */
+}
