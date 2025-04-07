@@ -1,46 +1,143 @@
 /* General Styles */
-* {
-    box-sizing: border-box;
+
+
+
+[data-theme="light"] {
+    --color-bg: #ffffff;
+    --color-fg: #000000;
+    --color-border:#00274C;
+    --color-link: #FFCB05; /* Link color */
+    --color-link-hover: #FFA500; /* Link hover color */
+    --color-tile-bg: #00274C; /* Tile background */
+    --color-nav-bg: #00274C; /* Nav background */
+    --color-nav-hover:#ffffff; /* Nav hover color */
+    --color-nav-select:#ffcb05;
+    --color-footer-bg: #00274C; /* Footer background */
+    --color-footer-fg: #ffffff; /* Footer text color */
+    --color-bullet: #00274C; /* Bullet color */
+    --color-h1-blue: #00274C; 
+    --color-h1-yellow: #FFCB05;
+    --color-h2: #FFCB05; /* H2 color */
+    --color-h3: #FFCB05; /* H3 color */
+    --color-h4: #FFCB05; /* H4 color */
+    --color-h5: #FFCB05; /* H5 color */
+    --color-h6: #FFCB05; /* H6 color */
+    --color-p: #ffffff; /* Paragraph color */
+    --color-notile-p:#00274C; 
+    --color-li: #00274C; /* List item color */
+    --color-mblue: #1C8FAA;
 }
+  
+[data-theme="dark"] {
+    --color-bg: #000000;
+    --color-fg: #ffffff; /* Foreground (text) color */
+    --color-border:#ffffff;
+    --color-link: #FFD700; /* Link color */
+    --color-link-hover: #FFA500; /* Link hover color */
+    --color-tile-bg: #1E1E1E; /* Tile background */
+    --color-tile-fg: #ffffff; /* Tile text color */
+    --color-nav-bg: #00274C; /* Nav background */
+    --color-nav-hover:#000000; /* Nav hover color */
+    --color-nav-select:#060606;
+    --color-footer-bg: #1E1E1E; /* Footer background */
+    --color-footer-fg: #ffffff; /* Footer text color */
+    --color-bullet: #FFD700; /* Bullet color */
+    --color-h1-blue: #ffffff; /* H1 color */
+    --color-h1-yellow: #FFCB05;
+    --color-h2: #FFD700; /* H2 color */
+    --color-h3: #FFD700; /* H3 color */
+    --color-h4: #FFD700; /* H4 color */
+    --color-h5: #FFD700; /* H5 color */
+    --color-h6: #FFD700; /* H6 color */
+    --color-p: #ffffff; /* Paragraph color */
+    --color-notile-p:#ffffff; 
+    --color-li: #ffffff; /* List item color */
+    --color-mblue:  #1E1E1E;;
+}
+  
+/* General */
+
+/* Style the theme toggle button */
+.theme-toggle-button {
+    background-color: var(--color-link);
+    color: var(--color-footer-bg); 
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20%; /* Make the button circular */
+    cursor: pointer;
+    font-size: 1.5rem; /* Adjust icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add hover effect for the button */
+.theme-toggle-button:hover {
+    background-color: var(--color-bg);
+    color: var(--color-fg); /* Contrast color for hover */
+}
+
 
 body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
     font-family: 'Nunito sans', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0px;
+    font-family: 'Nunito sans', sans-serif;
     overflow-x: hidden; /* Prevent horizontal scroll */
     word-wrap: break-word; /* Ensure long words break correctly */
-    overflow-wrap: break-word; /* Ensure long words break correctly */
-    padding-top: 60px; /* Adds space for fixed header */
     display: block;
+    line-height: 1.6; /* Consistent line height */
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
     font-family: 'Nunito sans', sans-serif;
+    margin: 0 0 15px; /* Consistent spacing below headings */
+    color: var(--color-fg)
 }
 
 h1 {
     font-size: 2.5rem;
+    color: var(--color-h1-blue); /* H1 color */
 }
 
 h2 {
     font-size: 2rem;
+    color: var(--color-h2);
 }
 
 h3 {
     font-size: 1.5rem;
+    color: var(--color-h3);
 }
 
 h4 {
     font-size: 1.25rem;
+    color: var(--color-h4);
+}
+
+p, ul, ol {
+    font-size: 1.25rem; /* Consistent paragraph and list font size */
+    margin-bottom: 15px; /* Consistent spacing below text */
+    line-height: 1.5; /* Readable line height */
+    color: var(--color-p);
+}
+
+li {
+    font-size: 1.25rem; /* Match paragraph font size */
+    margin-bottom: 10px; /* Consistent spacing between list items */
+    color: var(--color-fg);
 }
 
 /* Header Styles */
 .fixed-header {
-    position: fixed; /* Fixed header */
     top: 0;
     width: 100%; /* Full width */
     overflow: hidden; /* Hide overflow content */
-    background-color: #00274C;
+    background-color: var(--color-tile-bg);
+    color: var(--color-p);
     z-index: 1000;
     display: flex; /* Flex container to wrap header */
     flex-direction: column;
@@ -76,6 +173,7 @@ h4 {
 }
 
 .nav-links {
+    
     display: flex;
     flex-direction: column; /* Stack items vertically on mobile */
     list-style: none; 
@@ -96,31 +194,38 @@ h4 {
     display: block;
     padding: 14px 16px;
     text-decoration: none;
-    color: #f2f2f2;
+    color: var(--color-link);
     text-align: center; /* Center text in nav items */
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #ddd;
-    color: black;
-}
+    background-color: var(--color-nav-hover);
+    color: var(--col);
+    font-weight: bold; /* Make the active link bold */
+    text-transform: uppercase; /* Make the text uppercase */
+    text-decoration: underline;
 
+}
+/* Changing active nav link to have other cues than color */
 .nav-links a.active {
-    background-color: #FFCB05; 
-    color: black;
+    background-color: var(--color-nav-select);
+    color: var(--color-fg);
+    font-weight: bold; /* Make the active link bold */
+    text-transform: uppercase; /* Make the text uppercase */
+    text-decoration: underline;
 }
 
 /* Banner Styles */
 .banner {
     position: relative; /* Relative positioning for overlay */
     text-align: center;
-    color: white;
+    color: var(--color-p);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 150px; /* Add space between nav links and banner */
+    margin-top: 30px; /* Add space between nav links and banner */
 }
 
 .banner img {
@@ -144,15 +249,16 @@ h4 {
 .banner h1 {
     font-size: 8vw; /* Scales with screen width */
     margin: 0;
+    color: var(--color-p);
 }
 
 /* Skip Link Styles */
 a.skip {
     position: absolute;
-    top: -40px;
-    left: -40px;
-    background: #000;
-    color: #fff;
+    top: -80px;
+    left: -80px;
+    background: var(--color-bg);
+    color: var(--color-fg);
     padding: 8px;
     z-index: 100;
     text-decoration: none;
@@ -171,12 +277,12 @@ img {
 
 /* Welcome Section Styles */
 .welcome-section {
-    margin-top: 150px;
+    margin-top: 20px;
 }
 .welcome-section h2 {
     font-size: 1.75rem;
     margin-bottom: 10px;
-    color: #00274C; /* Yellow color */
+    color: var(--color-notile-p);
     font-weight: bold; /* Make bold */
 }
 
@@ -184,7 +290,7 @@ img {
 .welcome-section ol {
     font-size: 1.25rem;
     line-height: 1.5;
-    color: black;
+    color: var(--color-notile-p);
     margin-bottom: 10px; /* Add spacing between paragraphs */
     padding-left: 20px; /* Add padding to the left for list items */
 }
@@ -193,13 +299,15 @@ img {
     margin-bottom: 5px; /* Add spacing between list items */
     position: relative;
     padding-left: 20px; /* Add padding to the left for custom bullet */
+    color: var(--color-notile-p);
+    font-weight: bold;
 }
 
 .welcome-section li::before {
     content: "•"; /* Custom bullet */
+    color: var(--color-notile-p);
     position: absolute;
     left: 0;
-    color: #00274C; 
     font-weight: bold;
 }
 /* Grid Layout for Sections */
@@ -208,209 +316,453 @@ main {
     position: relative;
     z-index: 1;
 }
+
 .main-index,
 .main-academic-advising,
 .main-mblue,
 .main-student-life {
     display: grid;
     gap: 20px;
-    padding-top: 100px;
+    padding-top: 40px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 .main-index {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding-top: 150px
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
 }
 
 .main-academic-advising {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding-top: 250px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
 }
 
 .main-mblue {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding-top: 270px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
 }
 
 .main-student-life {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
     padding-top: 250px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr)); /* Adjusts for smaller tiles */
+    gap: 20px;
 }
 
+/* Student Life Grid */
+.main-student-life {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 2fr)); /* Larger tiles for this section */
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+}
+
+
 /* Tile Styles */
-.tile,
-.mblue-tile {
-    background-color: #00274C;
-    border: 1px solid #ddd;
+.tile {
+    display: block;
+    background-color: var(--color-tile-bg);
+    color: var(--color-tile-fg);
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .tile h1 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: white; /* Yellow color */
-    font-weight: bold; /* Make bold */
-
-}
-.mblue-tile {
-    background-color: #1C8FAA;
+    color: var(--color-h1-yellow);
+    font-weight: bold;
 }
 
 .tile h2 {
     font-size: 1.75rem;
     margin-bottom: 10px;
-    color: #FFCB05; /* Yellow color */
-    font-weight: bold; /* Make bold */
-
-}
-
-
-.mblue-tile h2 {
-    font-size: 1.75rem;
-    margin-bottom: 10px;
-    color: white; /* Yellow color */
-    font-weight: bold; /* Make bold */
-}
-
-.mblue-tile h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: white;
-    font-weight: bold; /* Make bold */
-}
-
-.tile h3,
-.mblue-tile h3 {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-    color: #FFCB05;
-    font-weight: bold; /* Make bold */
-}
-
-.tile p,
-.mblue-tile p {
-    font-size: 1.25rem;
-    line-height: 1.5;
-    color: white;
-    margin-bottom: 10px; /* Add spacing between paragraphs */
-}
-
-.tile ul,
-.mblue-tile ul {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: white;
-    margin-bottom: 10px; /* Add spacing between paragraphs */
-    padding-left: 20px; /* Add padding to the left for list items */
-}
-
-.tile li,
-.mblue-tile li {
-    margin-bottom: 5px; /* Add spacing between list items */
-    position: relative;
-    padding-left: 20px; /* Add padding to the left for custom bullet */
-}
-
-.tile li::before,
-.mblue-tile li::before {
-    content: "•"; /* Custom bullet */
-    position: absolute;
-    left: 0;
-    color: #FFCB05; /* Yellow color for bullet */
+    color: var(--color-h2);
     font-weight: bold;
 }
 
-.tile strong,
-.mblue-tile strong {
-    font-weight: bold; /* Ensure strong elements are bold */
+.tile h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--color-h3);
+    font-weight: bold;
 }
 
-.tile article,
-.mblue-tile article {
-    margin-bottom: 20px;
+.tile p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--color-p);
+    margin-bottom: 10px;
 }
 
-.tile figure,
-.mblue-tile figure {
-    margin: 0;
-    padding: 0;
-    text-align: center;
+.tile ul {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-p);
+    margin-bottom: 10px;
+    padding-left: 20px;
 }
 
-.tile img,
-.mblue-tile img {
+.tile li {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
+    color: var(--color-p);
+}
+
+.tile li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-h2);
+    font-weight: bold;
+}
+
+.tile strong {
+    font-weight: bold;
+    color: var(--color-h2);
+}
+
+.tile img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.tile figcaption,
-.mblue-tile figcaption {
+.tile figcaption {
     font-size: 0.875rem;
-    color: white;
+    color: var(--color-p);
     margin-top: 5px;
     text-align: center;
-    margin-bottom: 10px; /* Add spacing between figcaption and other elements */
+    margin-bottom: 10px;
 }
 
-.tile a,
-.mblue-tile a {
-    color: #FFCB05; /* Yellow color for links */
-    text-decoration: underline; 
+.tile a {
+    color: var(--color-link);
+    text-decoration: underline;
 }
 
 .tile a:hover,
-.tile a:focus,
-.mblue-tile a:hover,
-.mblue-tile a:focus {
-    color: #FFD700; /* Lighter yellow color for hover and focus states */
-    text-decoration: underline; /* Add underline on hover and focus */
+.tile a:focus {
+    color: var(--color-link-hover);
+    text-decoration: underline;
 }
 
-.tile a:active,
-.mblue-tile a:active {
-    color: #FFA500; /* Orange color for active (clicked) state */
+/* mblue Tile Styles */
+.mblue-tile {
+    background-color: var(--color-mblue);
+    color: var(--color-h1-blue); /* Ensure all text is black */
+}
+
+.mblue-tile h1,
+.mblue-tile h2,
+.mblue-tile h3,
+.mblue-tile p,
+.mblue-tile ul,
+.mblue-tile li,
+.mblue-tile strong,
+.mblue-tile figcaption,
+.mblue-tile a {
+    color: var(--color-h1-blue); /* Override text color to black */
+}
+
+.mblue-tile li::before {
+    color: var(--color-h1-blue); /* Ensure custom bullet is black */
 }
 
 
-
-/* Table Styles */
-.tile table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+/* meet the team styles */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    margin-top: 20px;
+    padding: 20px;
 }
 
-.tile table td {
-    padding: 10px;
-    vertical-align: top;
+.team-member {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align content */
     text-align: center;
-}
-
-.tile table img {
-    height: 150px; /* Set a fixed height for the images */
-    width: auto; /* Maintain aspect ratio */
+    background-color: var(--color-bg);
+    padding: 20px;
     border-radius: 8px;
 }
-/* Footer Styles */
+
+.team-member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; 
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--color-h1)
+}
+
+.team-member p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: var(--color-fg);
+}
+.team-member ul {
+    margin: 10px 0 15px 20px; /* Add left margin for indentation */
+    padding: 0; /* Remove default padding */
+    text-align: left; /* Align the list to the left */
+}
+
+.team-member li {
+    font-size: 1rem; /* Slightly smaller font size for team-member lists */
+    line-height: 1.5; /* Adjust line height */
+    margin-bottom: 8px; /* Reduce spacing between list items */
+    color: var(--color-fg); /* Use foreground color */
+}
+
+
+/* Footer */
 footer {
-    background-color: #00274C; /* Background color */
-    color: white; /* Text color */
     padding: 20px;
     text-align: center;
+    font-size: 1rem; /* Smaller footer text */
+    background-color: var(--color-footer-bg) ;
+    color: var(--color-footer-fg);
 }
 
 footer a {
-    color: #FFD700; /* Link color */
-    text-decoration: underline; /* Remove underline */
+    color: var(--color-link); /* Consistent link color */
+    text-decoration: underline;
 }
 
-footer a:hover,
-footer a:focus {
-    color: #FFA500; /* Lighter yellow color for hover and focus states */
-    text-decoration: underline; /* Add underline on hover and focus */
+footer a:hover, footer a:focus {
+    color: var(--color-link-hover); /* Hover state for links */
+}
+
+@media (min-width: 768px) {
+ /* Academic Advising Layout */
+    .main-academic-advising {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+        gap: 20px; /* Space between tiles */
+    }
+
+    .main-academic-advising > .tile:first-child,
+    .main-academic-advising > .tile:last-child {
+        grid-column: span 2; /* Make the first and last tiles span the entire width */
+    }
+
+    .main-academic-advising > .tile:first-child {
+        grid-column: span 2; /* Make the first tile span the entire width */
+    }
+    .main-academic-advising > .tile:nth-child(2) {
+        grid-column: span 2; /* Make the "Meet the Academic Success Team" tile span the entire width */
+    }
+    .main-academic-advising > .tile:nth-child(5) {
+        grid-column: span 2; /* Make the "Meet the Academic Success Team" tile span the entire width */
+    }
+    .main-academic-advising > .tile:nth-child(6) {
+        grid-column: span 2; /* Make the "Meet the Academic Success Team" tile span the entire width */
+    }
+    .main-academic-advising > .tile:nth-child(7) {
+        grid-column: span 2; 
+    }
+
+    /* UMSI student life*/
+    .main-student-life {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+    }
+    .main-student-life > .tile:first-child {
+        grid-column: span 2;
+    }
+    .main-student-life > .tile:nth-child(2) {
+        grid-column: span 2; 
+
+    }
+    .main-student-life > .tile:nth-child(5) {
+        grid-column: span 2; 
+
+    }
+
+
+    
+    /* index*/
+    .main-index {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+    }
+    .main-index > .banner:first-child,
+    .main-index > .welcome-section,
+    .main-index > .tile:last-child {
+        grid-column: span 2;
+    }
+
+    /* mblue Section */
+    .main-mblue {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+        gap: 20px; /* Space between tiles */
+        padding: 20px; /* Add padding around the grid */
+    }
+
+    .main-mblue > .tile:first-child,
+    .main-mblue > .tile:last-child, 
+    .main-mblue > .tile:nth-child(4) {
+        grid-column: span 2; /* Make the first and last tiles span the entire width */
+    }
+
+
+    .tile {
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .team-member img {
+        max-width: 70%; /* Scale down image size for medium screens */
+    }
+
+    .team-member h3,
+    .team-member p,
+    .team-member li {
+        font-size: 1.25rem; /* Larger font size for medium screens */
+    }
+
+
+    .tile h2, .mblue-tile h2 {
+        font-size: 1.85rem;
+    }
+
+    .tile h3, .mblue-tile h3 {
+        font-size: 1.6rem;
+    }
+
+    .tile p, .mblue-tile p {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* Media Query for 1200px and above */
+@media (min-width: 1200px) {
+    .nav {
+        display: flex;
+        justify-content: space-between; /* Spread out nav items */
+        align-items: center;
+        padding: 0 40px; /* Add padding to the sides */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row; /* Align nav items horizontally */
+        justify-content: center; /* Align items to the center */
+        gap: 20px; /* Add spacing between nav items */
+    }
+
+    .nav-links li {
+        display: inline-block; /* Ensure items are inline */
+        min-width: auto; /* Remove minimum width for nav items */
+    }
+
+    .nav-links a {
+        padding: 10px 20px; /* Adjust padding for larger screens */
+        font-size: 1.25rem; /* Increase font size */
+        text-transform: uppercase; /* Make text uppercase */
+        font-weight: bold; /* Make text bold */
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+        background-color: var(--color-nav-hover); /* Add hover background */
+        color: var(--color-fg); /* Adjust hover text color */
+        border-radius: 5px; /* Add rounded corners */
+    }
+
+    .theme-toggle-button {
+        font-size: 2rem; /* Increase icon size */
+        padding: 10px 15px; /* Adjust padding */
+    }
+    /* Increase font sizes for headings and text */
+    h1 {
+        font-size: 3rem; /* Larger H1 for desktop */
+    }
+
+    h2 {
+        font-size: 2.5rem; /* Larger H2 for desktop */
+    }
+
+    h3 {
+        font-size: 2rem; /* Larger H3 for desktop */
+    }
+
+    h4 {
+        font-size: 1.75rem; /* Larger H4 for desktop */
+    }
+
+    p, ul, ol, figcaption {
+        font-size: 1.5rem; /* Larger paragraph and list font size */
+        line-height: 1.8; /* Increase line height for readability */
+    }
+
+    li {
+        font-size: 1.5rem; /* Match paragraph font size */
+    }
+
+    .tile h1 {
+        font-size: 2.5rem; /* Larger tile H1 */
+    }
+
+    .tile h2 {
+        font-size: 2rem; /* Larger tile H2 */
+    }
+
+    .tile h3 {
+        font-size: 1.75rem; /* Larger tile H3 */
+    }
+
+    .tile p {
+        font-size: 1.5rem; /* Larger tile paragraph text */
+    }
+
+    footer {
+        font-size: 1.25rem; /* Larger footer text */
+    }
+
+    .team-member img {
+        max-width: 50%; /* Scale down image size for large screens */
+    }
+
+    .team-member h3,
+    .team-member p,
+    .team-member li {
+        font-size: 1.5rem; /* Larger font size for large screens */
+    }
+
 }

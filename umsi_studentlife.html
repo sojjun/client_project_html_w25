@@ -6,6 +6,7 @@
     <title>UMSI Student Life</title>
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -23,7 +24,18 @@
                     <li><a href="umsi_studentlife.html" class="active">UMSI Student Life</a></li>
                 </ul>
             </nav>
+            <!-- Theme Toggle Button -->
+            <button
+                type="button"
+                data-theme-toggle
+                aria-label="Change to dark theme"
+                class="theme-toggle-button"
+        >
+            <i class="fas fa-sun" aria-hidden="true"></i>
+            <i class="fas fa-moon" aria-hidden="true" style="display: none;"></i>
+        </button>
         </div>
+        <script src="js/js.js"></script>
     </header>
 
     <main id="main-content" class="main-student-life">
@@ -75,15 +87,17 @@
             <h3>The Academic Programs and Student Life team</h3>
             <div>
                 <p>The <a href="https://www.si.umich.edu/student-experience/academic-success/about-academic-programs-and-student-life-team">Academic Programs and Student Life team</a> is situated within the Office of Academic and Student Affairs. Our team leads a wide range of success-oriented work with and for current students at the School of Information (UMSI) across academic programs. We strive to enhance the student educational experience through programs, services, and opportunities that support <a href="https://www.si.umich.edu/student-experience/academic-success">academic success</a>, develop skills, and foster a positive and accessible environment for all UMSI students starting at the point they matriculate to a UMSI program.</p>
+                <img src="images/autoclass.jpg" alt="Students take a selfie together during SI 311-150, Introduction to Automotive User Experience.">
             </div>
-        </div>
 
-        <div class="tile">
-            <img src="images/autoclass.jpg" alt="Students take a selfie together during SI 311-150, Introduction to Automotive User Experience.">
-        </div>
     </main>
+
+    <!-- footer from codexworld.com -->
     <footer>
-        <p>UMSI Student Life | <a href="https://www.si.umich.edu/student-experience/student-life">UMSI Student Life</a></p>
+        <p>Copyright © <span id="year"></span> UMSI | Student Success Portal |<a href="https://www.si.umich.edu/student-experience/student-life">UMSI Student Life</a></p>
     </footer>
 </body>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </html>

@@ -6,6 +6,7 @@
     <title>Academic Support at UMSI</title>
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="fixed-header">
@@ -22,7 +23,18 @@
                     <li><a href="umsi_studentlife.html">UMSI Student Life</a></li>
                 </ul>
             </nav>
+            <!-- Theme Toggle Button -->
+            <button
+                type="button"
+                data-theme-toggle
+                aria-label="Change to dark theme"
+                class="theme-toggle-button"
+        >
+            <i class="fas fa-sun" aria-hidden="true"></i>
+            <i class="fas fa-moon" aria-hidden="true" style="display: none;"></i>
+        </button>
         </div>
+        <script src="js/js.js"></script>
     </header>
 
     <main id="main-content" class="main-academic-advising">
@@ -78,47 +90,52 @@
 
         <div class="tile">
             <h2>Meet the Academic Success Team!</h2>
-            <table>
-                <tr>
-                    <td>
-                        <img src="images/sg.jpg" alt="Shannon Gass">
-                        <h3>Shannon Gass</h3>
-                        <p>Assistant Director of Academic Success</p>
-                        <p><i>Pronouns: She/Her/Hers</i></p>
-                        <p>Support Focus Areas:</p>
-                        <p>Tutoring
-                            Academic Standing
-                            Academic Success Skills
-                            Student Concerns
-                            Academic Accommodations & Working with SSD</p>
-                    </td>
-                    <td>
-                        <img src="images/kc.jpg" alt="KC Pepera">
-                        <h3>KC Pepera</h3>
-                        <p>Student Support Manager</p>
-                        <p><i>Pronouns: She/Her/Hers</i></p>
-                        <p>Support Focus Areas:</p>
-                        <p>Student Well-Being
-                            Emergency Funding Options
-                            Response to Care Report
-                            Connections to UM & Community Resources</p>
-                    </td>
-                </tr>
-            </table>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="images/sg.jpg" alt="Shannon Gass">
+                    <h3>Shannon Gass</h3>
+                    <p>Assistant Director of Academic Success</p>
+                    <p><i>Pronouns: She/Her/Hers</i></p>
+                    <p>Support Focus Areas:</p>
+                    <ul>
+                        <li>Tutoring</li>
+                        <li>Academic Standing</li>
+                        <li>Academic Success Skills</li>
+                        <li>Student Concerns</li>
+                        <li>Academic Accommodations & Working with SSD</li>
+                    </ul>
+                </div>
+                <div class="team-member">
+                    <img src="images/kc.jpg" alt="KC Pepera">
+                    <h3>KC Pepera</h3>
+                    <p>Student Support Manager</p>
+                    <p><i>Pronouns: She/Her/Hers</i></p>
+                    <p>Support Focus Areas:</p>
+                    <ul>
+                        <li>Student Well-Being</li>
+                        <li>Emergency Funding Options</li>
+                        <li>Response to Care Report</li>
+                        <li>Connections to UM & Community Resources</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="tile">
             <h2>Success Coaching Drop-ins</h2>
-            <h3>Connect with the Academic Success Team during Success Coaching Drop-Ins!</h3>
             <div>
+                <p>Connect with the Academic Success Team during Success Coaching Drop-Ins!</p>
                 <p>These sessions are intended to help support students with time management, study skills, connection to campus resources, and topics related to academic success.</p>
                 <p>Virtual Drop-Ins will be available on Thursdays from 10:00am - 11:00am ET.</p>
             </div>
-            <a href="https://officehours.it.umich.edu/queue/1642/">Click here to Join the Success Coaching Queue</a>
+            <p><a href="https://officehours.it.umich.edu/queue/1642/">Click here to Join the Success Coaching Queue</a></p>
         </div>
     </main>
+    <!-- footer from codexworld.com -->
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a></p>
+        <p>Copyright © <span id="year"></span> UMSI | Student Success Portal | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a></p>
     </footer>
 </body>
-</html>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
